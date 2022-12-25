@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  control:
+    image: ubuntu
+    hostname: control
+    command: /bin/bash
+    networks:
+      - cs423-assignment-4
+
+  node1:
+    image: ubuntu
+    hostname: node1
+    command: /bin/bash
+    networks:
+      - cs423-assignment-4
+
+  node2:
+    image: ubuntu
+    hostname: node2
+    command: /bin/bash
+    networks:
+      - cs423-assignment-4
+
+  node3:
+    image: ubuntu
+    hostname: node3
+    command: /bin/bash
+    networks:
+      - cs423-assignment-4
+
+  node4:
+    image: ubuntu
+    hostname: node4
+    command: /bin/bash
+    networks:
+      - cs423-assignment-4
+
+networks:
+  cs423-assignment-4:
+    driver: bridge
