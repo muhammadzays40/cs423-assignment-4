@@ -1,2 +1,2 @@
-3.87.1.229 ssh_agent_user=ubuntu
-54.89.223.60 ssh_agent_user=ubuntu
+3.87.1.229 ansible_user=ubuntu
+54.89.223.60 ansible_user=ubuntu
