@@ -1,0 +1,36 @@
+---
+
+ - name: Playbook 2
+   hosts: webservers
+   become: true
+   tasks:
+
+   - name: Install nginx
+     apt:
+      name: nginx
+      state: present
+
+   - name: Enable and start nginx
+     service:
+      name: nginx
+      enabled: true
+      state: started
+
+   - name: Remove Repo if exist
+     shell: rm -rf gik-fcse-icet2022
+
+   - name: Clone git repository
+     shell: git clone https://github.com/msajidaligik/gik-fcse-icet2022.git
+
+   - name: Copy repository to nginx root
+     copy:
+      src: gik-fcse-icet2022/
+      dest: /var/www/html
+      owner: www-data
+      group: www-data
+      mode: 0644
+
+   - name: Restart nginx
+     service:
+      name: nginx
+      state: restart
