@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install nginx package
+    apt:
+      name: nginx
+      state: present
+  - name: Start nginx service
+    service:
+      name: nginx
+      state: started
+      enabled: true
+  - name: apt update
+    apt:
+      update_cache: yes
