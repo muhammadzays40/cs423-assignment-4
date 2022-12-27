@@ -19,7 +19,7 @@
       state: started
 
    - name: Remove Repo if exist
-     shell: rm -rf ~/icet2020/
+     shell: rm -rf ~/icet2020
 
    - name: Clone git repository
      git:
