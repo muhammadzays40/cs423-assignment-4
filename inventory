@@ -1,8 +1,8 @@
 [webservers]
-44.206.243.197 ansible_user=ubuntu
-44.203.191.94 ansible_user=ubuntu
+172.21.0.6 ansible_user=root
+172.21.0.3 ansible_user=root
 
 [databaseserver]
-52.87.155.142 ansible_user=ubuntu
-52.55.244.111 ansible_user=ubuntu
+172.21.0.2 ansible_user=root
+172.21.0.5 ansible_user=root
 
